@@ -13,7 +13,7 @@
              name="queryparams"
              expression="$ctx:queryparams"/>
    <property name="urlVal"
-             value="wss://uat.ppe-np.elsevier.com:443/services/ppe-service-reference-structuring/structure-references"/>
+             value="wss://app.ppe.elsevier.com:443/services/ppe-service-reference-structuring/structure-references"/>
    <property xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
              xmlns:ns3="http://org.apache.synapse/xsd"
              name="fullUrl"
@@ -25,7 +25,7 @@
            expression="$ctx:fullUrl"/>
    <send>
       <endpoint>
-         <address uri="wss://uat.ppe-np.elsevier.com:443/services/ppe-service-reference-structuring/structure-references">
+         <address uri="wss://app.ppe.elsevier.com:443/services/ppe-service-reference-structuring/structure-references">
       <timeout>
         <duration>30000</duration>
         <responseAction>fault</responseAction>
@@ -40,7 +40,7 @@
         <errorCodes>-1</errorCodes>
       </markForSuspension>
     </address>
-    <property name="ENDPOINT_ADDRESS" value="wss://uat.ppe-np.elsevier.com:443/services/ppe-service-reference-structuring/structure-references"/>
+    <property name="ENDPOINT_ADDRESS" value="wss://app.ppe.elsevier.com:443/services/ppe-service-reference-structuring/structure-references"/>
       </endpoint>
    </send>
 </sequence>

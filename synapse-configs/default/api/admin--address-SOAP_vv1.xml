@@ -13,9 +13,9 @@
             <then>
                <send>
                   <endpoint name="admin--address-SOAP_APIproductionEndpoint_0">
-                     <address uri="https://address-soap-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/postaladdressvalidatorPS"/>
+                     <address uri="https://address-soap-eip.apps.ose.cp.tio.systems/cxf/postaladdressvalidatorPS"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://address-soap-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/postaladdressvalidatorPS"/>
+                               value="https://address-soap-eip.apps.ose.cp.tio.systems/cxf/postaladdressvalidatorPS"/>
                   </endpoint>
                </send>
             </then>
@@ -36,7 +36,7 @@
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
          <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
-         <property name="APILevelPolicy" value="AddressServiceThrottle"/>
+         <property name="APILevelPolicy" value="Unlimited"/>
          <property name="APISecurity" value="oauth2"/>
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>

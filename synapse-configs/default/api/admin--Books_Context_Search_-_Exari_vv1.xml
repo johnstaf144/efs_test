@@ -13,17 +13,17 @@
             <then>
                <send>
                   <endpoint name="admin--Books Context Search - Exari_APIproductionEndpoint_0">
-                     <http uri-template="https://uat.bcsapi.bookmodules-nonprod.tio.systems/api/v1.1/"/>
+                     <http uri-template="https://prod.bcsapi.bookmodules-prod.tio.systems/api/v1.1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat.bcsapi.bookmodules-nonprod.tio.systems/api/v1.1/"/>
+                               value="https://prod.bcsapi.bookmodules-prod.tio.systems/api/v1.1/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Books Context Search - Exari_APIsandboxEndpoint_0">
-                     <http uri-template="popov1"/>
-                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                     <http uri-template="admin"/>
+                     <property name="ENDPOINT_ADDRESS" value="admin"/>
                   </endpoint>
                </send>
             </else>

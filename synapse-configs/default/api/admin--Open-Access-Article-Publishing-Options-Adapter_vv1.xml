@@ -15,14 +15,14 @@
             <then>
                <send>
                   <endpoint name="admin--Open-Access-Article-Publishing-Options-Adapter_APIproductionEndpoint_0">
-                     <http uri-template="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options">
+                     <http uri-template="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options">
                         <timeout>
-                           <duration>90000</duration>
+                           <duration>30000</duration>
                            <responseAction>fault</responseAction>
                         </timeout>
                      </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options"/>
+                               value="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options"/>
                   </endpoint>
                </send>
             </then>
@@ -51,14 +51,14 @@
             <then>
                <send>
                   <endpoint name="admin--Open-Access-Article-Publishing-Options-Adapter_APIproductionEndpoint_1">
-                     <http uri-template="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options">
+                     <http uri-template="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options">
                         <timeout>
-                           <duration>90000</duration>
+                           <duration>30000</duration>
                            <responseAction>fault</responseAction>
                         </timeout>
                      </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options"/>
+                               value="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options"/>
                   </endpoint>
                </send>
             </then>
@@ -87,14 +87,14 @@
             <then>
                <send>
                   <endpoint name="admin--Open-Access-Article-Publishing-Options-Adapter_APIproductionEndpoint_2">
-                     <http uri-template="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options">
+                     <http uri-template="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options">
                         <timeout>
-                           <duration>90000</duration>
+                           <duration>30000</duration>
                            <responseAction>fault</responseAction>
                         </timeout>
                      </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options"/>
+                               value="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options"/>
                   </endpoint>
                </send>
             </then>

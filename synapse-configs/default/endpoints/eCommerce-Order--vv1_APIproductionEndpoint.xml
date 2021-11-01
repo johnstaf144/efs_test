@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="eCommerce-Order--vv1_APIproductionEndpoint">
-   <http uri-template="https://order-status-api.staging.ecommerce.elsevier.com/">
+   <http uri-template="https://order-status-api.prod.ecommerce.elsevier.com/">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://order-status-api.staging.ecommerce.elsevier.com/"/>
+             value="https://order-status-api.prod.ecommerce.elsevier.com/"/>
 </endpoint>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="FileUpload--vv1_APIproductionEndpoint">
-   <http uri-template="https://vtw-fileupload-proxy-ob2uat.apps.ose-nonprod.cp.tio.systems/carii/">
+   <http uri-template="https://vtw-fileupload-proxy-ob2.apps.ose.cp.tio.systems/carii">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://vtw-fileupload-proxy-ob2uat.apps.ose-nonprod.cp.tio.systems/carii/"/>
+             value="https://vtw-fileupload-proxy-ob2.apps.ose.cp.tio.systems/carii"/>
 </endpoint>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="EPay--vv1_APIproductionEndpoint">
-   <http uri-template="https://epay-eipuat.apps.ose-nonprod.cp.tio.systems/v1/epay/">
+   <http uri-template="https://epay-eip.apps.ose.cp.tio.systems/v1/epay/">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://epay-eipuat.apps.ose-nonprod.cp.tio.systems/v1/epay/"/>
+             value="https://epay-eip.apps.ose.cp.tio.systems/v1/epay/"/>
 </endpoint>

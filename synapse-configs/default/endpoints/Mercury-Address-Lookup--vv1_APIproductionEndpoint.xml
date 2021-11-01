@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Mercury-Address-Lookup--vv1_APIproductionEndpoint">
-   <http uri-template="https://address-lookup.uat.mercury.tio.systems/">
+   <http uri-template="https://address-lookup-v3.qtc.tio.systems/">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://address-lookup.uat.mercury.tio.systems/"/>
+             value="https://address-lookup-v3.qtc.tio.systems/"/>
 </endpoint>

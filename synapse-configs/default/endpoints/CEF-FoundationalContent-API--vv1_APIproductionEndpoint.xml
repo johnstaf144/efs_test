@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="CEF-FoundationalContent-API--vv1_APIproductionEndpoint">
+   <http uri-template="https://prod-cef-fci-kr-api-service-exec-elb.cef.elsevier.com/v1">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://prod-cef-fci-kr-api-service-exec-elb.cef.elsevier.com/v1"/>
+</endpoint>

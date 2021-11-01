@@ -13,14 +13,19 @@
             <then>
                <send>
                   <endpoint name="admin--EPay_APIproductionEndpoint_0">
-                     <http uri-template="https://epay-eipuat.apps.ose-nonprod.cp.tio.systems/v1/epay/"/>
+                     <http uri-template="https://epay-eip.apps.ose.cp.tio.systems/v1/epay/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://epay-eipuat.apps.ose-nonprod.cp.tio.systems/v1/epay/"/>
+                               value="https://epay-eip.apps.ose.cp.tio.systems/v1/epay/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--EPay_APIsandboxEndpoint_0">
+                     <http uri-template="paulino1"/>
+                     <property name="ENDPOINT_ADDRESS" value="paulino1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -37,14 +42,19 @@
             <then>
                <send>
                   <endpoint name="admin--EPay_APIproductionEndpoint_1">
-                     <http uri-template="https://epay-eipuat.apps.ose-nonprod.cp.tio.systems/v1/epay/"/>
+                     <http uri-template="https://epay-eip.apps.ose.cp.tio.systems/v1/epay/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://epay-eipuat.apps.ose-nonprod.cp.tio.systems/v1/epay/"/>
+                               value="https://epay-eip.apps.ose.cp.tio.systems/v1/epay/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--EPay_APIsandboxEndpoint_1">
+                     <http uri-template="paulino1"/>
+                     <property name="ENDPOINT_ADDRESS" value="paulino1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -69,5 +79,5 @@
          <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
-</handlers>
+   </handlers>
 </api>

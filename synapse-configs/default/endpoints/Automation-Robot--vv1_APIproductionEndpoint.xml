@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Automation-Robot--vv1_APIproductionEndpoint">
-   <http uri-template="https://uipath-dev.elsevier.net:3001/">
+   <http uri-template="https://uipath.elsevier.net:3001/">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
-   <property name="ENDPOINT_ADDRESS" value="https://uipath-dev.elsevier.net:3001/"/>
+   <property name="ENDPOINT_ADDRESS" value="https://uipath.elsevier.net:3001/"/>
 </endpoint>

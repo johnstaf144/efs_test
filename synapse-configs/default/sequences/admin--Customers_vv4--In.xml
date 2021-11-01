@@ -5,49 +5,49 @@
            source="get-property('To')">
       <case regex=".*/organizations-by-domain.*">
          <property name="service_ep"
-                   value="https://customer-service-es-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-es-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/organizations-by-domain/.*">
          <property name="service_ep"
-                   value="https://customer-service-es-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-es-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/organizations-summaries.*">
          <property name="service_ep"
-                   value="https://customer-service-es-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-es-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/organizationhierarchies/.*/path">
          <property name="service_ep"
-                   value="https://customer-service-es-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-es-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/organizationhierarchies/.*/type/.*">
          <property name="service_ep"
-                   value="https://customer-service-es-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-es-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/findECR.*">
          <property name="service_ep"
-                   value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/countries.*">
          <property name="service_ep"
-                   value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/organizations.*">
          <switch source="get-property('axis2', 'HTTP_METHOD')">
             <case regex=".*GET*">
                <property name="service_ep"
-                         value="https://customer-service-es-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-es-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
             <case regex=".*POST*">
                <property name="service_ep"
-                         value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
             <case regex=".*PUT*">
                <property name="service_ep"
-                         value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
             <case regex=".*PATCH*">
                <property name="service_ep"
-                         value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
          </switch>
       </case>
@@ -55,41 +55,41 @@
          <switch source="get-property('axis2', 'HTTP_METHOD')">
             <case regex=".*GET*">
                <property name="service_ep"
-                         value="https://customer-service-es-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-es-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
             <case regex=".*POST*">
                <property name="service_ep"
-                         value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
             <case regex=".*PUT*">
                <property name="service_ep"
-                         value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
             <case regex=".*PATCH*">
                <property name="service_ep"
-                         value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                         value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
             </case>
          </switch>
       </case>
       <case regex=".*/persons.*">
          <property name="service_ep"
-                   value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/persons/.*">
          <property name="service_ep"
-                   value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/link.*">
          <property name="service_ep"
-                   value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/link/.*">
          <property name="service_ep"
-                   value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
       <case regex=".*/blacklist.*">
          <property name="service_ep"
-                   value="https://customer-service-jpa-v4-eipuat.apps.ose-nonprod.cp.tio.systems/v4/customers"/>
+                   value="https://customer-service-jpa-v4-eip.apps.ose.cp.tio.systems/v4/customers"/>
       </case>
    </switch>
    <header xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"

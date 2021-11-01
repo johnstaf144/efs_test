@@ -13,14 +13,19 @@
             <then>
                <send>
                   <endpoint name="admin--Enrichment Feedback_APIproductionEndpoint_0">
-                     <http uri-template="https://uat-cef-feedback-service-elb.cef-nonprod.elsevier.com/"/>
+                     <http uri-template="https://prod-cef-feedback-service-elb.cef.elsevier.com"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-feedback-service-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-feedback-service-elb.cef.elsevier.com"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Enrichment Feedback_APIsandboxEndpoint_0">
+                     <http uri-template="popov1"/>
+                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>

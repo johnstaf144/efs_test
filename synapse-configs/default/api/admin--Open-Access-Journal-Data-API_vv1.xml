@@ -15,14 +15,18 @@
             <then>
                <send>
                   <endpoint name="admin--Open-Access-Journal-Data-API_APIproductionEndpoint_0">
-                     <http uri-template="https://accoamm.oamm-np.elsevier.com/api/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://accoamm.oamm-np.elsevier.com/api/"/>
+                     <http uri-template="https://prdoamm.oamm.elsevier.com/api/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://prdoamm.oamm.elsevier.com/api/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Open-Access-Journal-Data-API_APIsandboxEndpoint_0">
+                     <http uri-template="admin"/>
+                     <property name="ENDPOINT_ADDRESS" value="admin"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -36,7 +40,11 @@
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
       </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+         <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+         <property name="APILevelPolicy" value=""/>
+         <property name="APISecurity" value="oauth2"/>
+      </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">

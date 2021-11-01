@@ -40,11 +40,16 @@
                <property name="uri.var.portnum" expression="get-property('https.nio.port')"/>
                <send>
                   <endpoint>
-                     <http uri-template="https://passthru.enterprise-uat.api.elsevier.com:{uri.var.portnum}/v2/license/v1">
-                        <timeout>
-                           <duration>60000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
+                     <http uri-template="https://passthru.enterprise.api.elsevier.com:{uri.var.portnum}/v2/license/v1">
+                        <suspendOnFailure>
+                           <errorCodes>-1</errorCodes>
+                           <initialDuration>0</initialDuration>
+                           <progressionFactor>1.0</progressionFactor>
+                           <maximumDuration>0</maximumDuration>
+                        </suspendOnFailure>
+                        <markForSuspension>
+                           <errorCodes>-1</errorCodes>
+                        </markForSuspension>
                      </http>
                   </endpoint>
                </send>

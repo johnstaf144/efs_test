@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Address--vv2_APIproductionEndpoint">
-   <http uri-template="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address">
+   <http uri-template="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+             value="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
 </endpoint>

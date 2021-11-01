@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Open-Access-Article-Publishing-Options-Adapter--vv1_APIproductionEndpoint">
-   <http uri-template="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options">
+   <http uri-template="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options">
       <timeout>
-         <duration>90000</duration>
+         <duration>30000</duration>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://publishing-options-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/oa-article-pub-options"/>
+             value="https://publishing-options-v1-eip.apps.ose.cp.tio.systems/v1/oa-article-pub-options"/>
 </endpoint>

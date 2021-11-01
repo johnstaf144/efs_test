@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--eCommerce-Order_APIproductionEndpoint_0">
-                     <http uri-template="https://order-status-api.staging.ecommerce.elsevier.com/"/>
+                     <http uri-template="https://order-status-api.prod.ecommerce.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://order-status-api.staging.ecommerce.elsevier.com/"/>
+                               value="https://order-status-api.prod.ecommerce.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>

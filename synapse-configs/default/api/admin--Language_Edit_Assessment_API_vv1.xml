@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_0">
-                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <http uri-template="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                               value="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                   </endpoint>
                </send>
             </then>
@@ -46,9 +46,9 @@
             <then>
                <send>
                   <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_1">
-                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <http uri-template="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                               value="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                   </endpoint>
                </send>
             </then>
@@ -77,9 +77,9 @@
             <then>
                <send>
                   <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_2">
-                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <http uri-template="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                               value="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                   </endpoint>
                </send>
             </then>
@@ -106,9 +106,9 @@
             <then>
                <send>
                   <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_3">
-                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <http uri-template="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                               value="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
                   </endpoint>
                </send>
             </then>

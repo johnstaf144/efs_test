@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--exari-product-search_APIproductionEndpoint_0">
-                     <http uri-template="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                     <http uri-template="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                               value="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                   </endpoint>
                </send>
             </then>
@@ -46,9 +46,9 @@
             <then>
                <send>
                   <endpoint name="admin--exari-product-search_APIproductionEndpoint_1">
-                     <http uri-template="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                     <http uri-template="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                               value="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                   </endpoint>
                </send>
             </then>
@@ -75,9 +75,9 @@
             <then>
                <send>
                   <endpoint name="admin--exari-product-search_APIproductionEndpoint_2">
-                     <http uri-template="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                     <http uri-template="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                               value="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                   </endpoint>
                </send>
             </then>
@@ -106,9 +106,9 @@
             <then>
                <send>
                   <endpoint name="admin--exari-product-search_APIproductionEndpoint_3">
-                     <http uri-template="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                     <http uri-template="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                               value="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                   </endpoint>
                </send>
             </then>
@@ -135,9 +135,9 @@
             <then>
                <send>
                   <endpoint name="admin--exari-product-search_APIproductionEndpoint_4">
-                     <http uri-template="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                     <http uri-template="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+                               value="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
                   </endpoint>
                </send>
             </then>
@@ -164,7 +164,7 @@
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
          <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
-         <property name="APILevelPolicy" value="Unlimited"/>
+         <property name="APILevelPolicy" value=""/>
          <property name="APISecurity" value="oauth2"/>
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>

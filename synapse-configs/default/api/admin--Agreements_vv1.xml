@@ -13,14 +13,20 @@
             <then>
                <send>
                   <endpoint name="admin--Agreements_APIproductionEndpoint_0">
-                     <http uri-template="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Agreements_APIsandboxEndpoint_0">
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -37,14 +43,20 @@
             <then>
                <send>
                   <endpoint name="admin--Agreements_APIproductionEndpoint_1">
-                     <http uri-template="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Agreements_APIsandboxEndpoint_1">
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -63,14 +75,20 @@
             <then>
                <send>
                   <endpoint name="admin--Agreements_APIproductionEndpoint_2">
-                     <http uri-template="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Agreements_APIsandboxEndpoint_2">
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -87,14 +105,20 @@
             <then>
                <send>
                   <endpoint name="admin--Agreements_APIproductionEndpoint_3">
-                     <http uri-template="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Agreements_APIsandboxEndpoint_3">
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -111,14 +135,20 @@
             <then>
                <send>
                   <endpoint name="admin--Agreements_APIproductionEndpoint_4">
-                     <http uri-template="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://sfmagreement-eipuat.apps.ose-nonprod.cp.tio.systems/v1/sf/agreements/"/>
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Agreements_APIsandboxEndpoint_4">
+                     <http uri-template="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://sfmagreement-eip.apps.ose.cp.tio.systems/v1/sf/agreements/"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -128,20 +158,18 @@
       </outSequence>
    </resource>
    <handlers>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
       </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+		<property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+	</handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
          <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
       </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
-         <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
-         <property name="APILevelPolicy" value="Unlimited"/>
-         <property name="APISecurity" value="oauth2"/>
-      </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
    </handlers>
 </api>

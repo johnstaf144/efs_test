@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Open-Access-Journal-Data-API--vv1_APIproductionEndpoint">
+   <http uri-template="https://prdoamm.oamm.elsevier.com/api/">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS" value="https://prdoamm.oamm.elsevier.com/api/"/>
+</endpoint>

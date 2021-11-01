@@ -496,9 +496,6 @@
 	<property name="ContentType" value="application/x-www-form-urlencoded" scope="axis2"></property>
 	<property name="messageType" value="application/x-www-form-urlencoded" scope="axis2"></property>
 	<property name="FORCE_POST_PUT_NOBODY" value="true" scope="axis2" type="BOOLEAN"></property>
-	<property name="ContentType" value="application/x-www-form-urlencoded" scope="axis2"></property>
-	<property name="messageType" value="application/x-www-form-urlencoded" scope="axis2"></property>
-	<property name="FORCE_POST_PUT_NOBODY" value="true" scope="axis2" type="BOOLEAN"></property>
          <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
             <then>
                <send>

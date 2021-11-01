@@ -6,7 +6,7 @@
      version-type="context"
      transports="https">
    <resource methods="GET"
-             uri-template="/agreement-data/{agreementAcronym}"
+             uri-template="/journaldata/{issn}"
              faultSequence="fault">
       <inSequence>
          <property name="api.ut.backendRequestTime"
@@ -15,9 +15,8 @@
             <then>
                <send>
                   <endpoint name="admin--Open-Access-Agreement-Data-API_APIproductionEndpoint_0">
-                     <http uri-template="https://accoamm.oamm-np.elsevier.com/api/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://accoamm.oamm-np.elsevier.com/api/"/>
+                     <http uri-template="https://prdoamm.oamm.elsevier.com/api/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://prdoamm.oamm.elsevier.com/api/"/>
                   </endpoint>
                </send>
             </then>

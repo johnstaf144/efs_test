@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--Manage-Blacklists-API_APIproductionEndpoint_0">
-                     <http uri-template="https://manage-blacklists-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://manage-blacklists-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://manage-blacklists-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://manage-blacklists-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -39,9 +39,9 @@
             <then>
                <send>
                   <endpoint name="admin--Manage-Blacklists-API_APIproductionEndpoint_1">
-                     <http uri-template="https://manage-blacklists-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://manage-blacklists-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://manage-blacklists-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://manage-blacklists-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>

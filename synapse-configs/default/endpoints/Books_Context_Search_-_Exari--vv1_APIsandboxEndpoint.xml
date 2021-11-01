@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Books Context Search - Exari--vv1_APIsandboxEndpoint">
-   <http uri-template="popov1">
+   <http uri-template="admin">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
-   <property name="ENDPOINT_ADDRESS" value="popov1"/>
+   <property name="ENDPOINT_ADDRESS" value="admin"/>
 </endpoint>

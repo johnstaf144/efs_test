@@ -13,18 +13,17 @@
             <then>
                <send>
                   <endpoint name="admin--Address_APIproductionEndpoint_0">
-                     <http uri-template="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                     <http uri-template="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                               value="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Address_APIsandboxEndpoint_0">
-                     <http uri-template="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
                   </endpoint>
                </send>
             </else>
@@ -43,18 +42,17 @@
             <then>
                <send>
                   <endpoint name="admin--Address_APIproductionEndpoint_1">
-                     <http uri-template="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                     <http uri-template="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                               value="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Address_APIsandboxEndpoint_1">
-                     <http uri-template="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
                   </endpoint>
                </send>
             </else>
@@ -73,18 +71,17 @@
             <then>
                <send>
                   <endpoint name="admin--Address_APIproductionEndpoint_2">
-                     <http uri-template="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                     <http uri-template="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                               value="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Address_APIsandboxEndpoint_2">
-                     <http uri-template="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
                   </endpoint>
                </send>
             </else>
@@ -105,18 +102,17 @@
             <then>
                <send>
                   <endpoint name="admin--Address_APIproductionEndpoint_3">
-                     <http uri-template="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                     <http uri-template="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ems006-address-service-v1-uat.business-services-bts-np.cortex.elsevier.systems/v2/address"/>
+                               value="https://ems006-address-service-v1-prod.business-services-bts.cortex.elsevier.systems/v2/address"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Address_APIsandboxEndpoint_3">
-                     <http uri-template="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://address-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/address"/>
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
                   </endpoint>
                </send>
             </else>

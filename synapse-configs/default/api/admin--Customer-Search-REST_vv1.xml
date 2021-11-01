@@ -13,9 +13,9 @@
             <then>
                <send>
                   <endpoint name="admin--Customer-Search-REST_APIproductionEndpoint_0">
-                     <http uri-template="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/CustomerSearchService"/>
+                     <http uri-template="https://customer-search-soap-service-v2-eip.apps.ose.cp.tio.systems/cxf/CustomerSearchService"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/CustomerSearchService"/>
+                               value="https://customer-search-soap-service-v2-eip.apps.ose.cp.tio.systems/cxf/CustomerSearchService"/>
                   </endpoint>
                </send>
             </then>
@@ -37,9 +37,9 @@
             <then>
                <send>
                   <endpoint name="admin--Customer-Search-REST_APIproductionEndpoint_1">
-                     <http uri-template="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/CustomerSearchService"/>
+                     <http uri-template="https://customer-search-soap-service-v2-eip.apps.ose.cp.tio.systems/cxf/CustomerSearchService"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/CustomerSearchService"/>
+                               value="https://customer-search-soap-service-v2-eip.apps.ose.cp.tio.systems/cxf/CustomerSearchService"/>
                   </endpoint>
                </send>
             </then>

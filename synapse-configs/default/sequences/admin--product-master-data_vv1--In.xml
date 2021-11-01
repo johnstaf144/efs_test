@@ -6,83 +6,83 @@
            source="get-property('To')">
       <case regex=".*/journal-numbers.*">
          <property name="service_ep"
-                   value="https://rapid-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://rapid-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/journal-numbers/.*">
          <property name="service_ep"
-                   value="https://rapid-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://rapid-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/business-units.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/business-units/pmgs/pmcs.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/business-units/.*/pmgs.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/distributors.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/imprints.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/persons.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/persons/.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/pmgs/.*/persons.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/pmgs/.*/pmcs.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/responsibility-centres.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/responsibility-centres/.*/persons.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/subject-areas.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/works.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/works/identifiers.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/pmgs.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/legal-owners.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/access-models.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
       <case regex=".*/business-models.*">
          <property name="service_ep"
-                   value="https://extended-product-master-data-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                   value="https://extended-product-master-data-v1-eip.apps.ose.cp.tio.systems"/>
       </case>
    </switch>
    <header xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Warehouses API--vv1_APIproductionEndpoint">
-   <http uri-template="https://warehouses-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/warehouses/">
+   <http uri-template="https://warehouses-v1-eip.apps.ose.cp.tio.systems/v1/warehouses/">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://warehouses-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/warehouses/"/>
+             value="https://warehouses-v1-eip.apps.ose.cp.tio.systems/v1/warehouses/"/>
 </endpoint>

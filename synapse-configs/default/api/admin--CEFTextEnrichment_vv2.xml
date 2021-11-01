@@ -13,24 +13,14 @@
             <then>
                <send>
                   <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_0">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_0">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -47,24 +37,14 @@
             <then>
                <send>
                   <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_1">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_1">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -83,60 +63,14 @@
             <then>
                <send>
                   <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_2">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_2">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
-            </else>
-         </filter>
-      </inSequence>
-      <outSequence>
-         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
-         <send/>
-      </outSequence>
-   </resource>
-   <resource methods="POST"
-             url-mapping="/section-classifications"
-             faultSequence="fault">
-      <inSequence>
-         <property name="api.ut.backendRequestTime"
-                   expression="get-property('SYSTEM_TIME')"/>
-         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
-            <then>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_3">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
-                  </endpoint>
-               </send>
-            </then>
-            <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_3">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -152,25 +86,15 @@
          <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
             <then>
                <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_4">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_3">
+                     <http uri-template="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_4">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -188,25 +112,15 @@
          <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
             <then>
                <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_5">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_4">
+                     <http uri-template="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_5">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -224,25 +138,15 @@
          <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
             <then>
                <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_6">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_5">
+                     <http uri-template="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_6">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -258,25 +162,15 @@
          <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
             <then>
                <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_7">
-                     <http uri-template="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/">
-                        <timeout>
-                           <duration>120000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                  <endpoint name="admin--CEFTextEnrichment_APIproductionEndpoint_6">
+                     <http uri-template="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-cef-text-enrichment-app-elb.cef-nonprod.elsevier.com/"/>
+                               value="https://prod-cef-text-enrichment-app-elb.cef.elsevier.com/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--CEFTextEnrichment_APIsandboxEndpoint_7">
-                     <http uri-template="admin"/>
-                     <property name="ENDPOINT_ADDRESS" value="admin"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -291,10 +185,8 @@
          <property name="apiImplementationType" value="ENDPOINT"/>
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
-         <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
-         <property name="APILevelPolicy" value=""/>
-         <property name="APISecurity" value="oauth2"/>
-      </handler>
+		<property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+	</handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">

@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_0">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -44,9 +44,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_1">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -75,9 +75,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_2">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -106,9 +106,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_3">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -135,9 +135,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_4">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -166,9 +166,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_5">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -197,9 +197,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_6">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -228,9 +228,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_7">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -259,9 +259,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_8">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -288,9 +288,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_9">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -319,9 +319,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_10">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -350,9 +350,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_11">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -381,9 +381,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_12">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -410,9 +410,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_13">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -441,9 +441,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_14">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -472,9 +472,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_15">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -501,9 +501,9 @@
             <then>
                <send>
                   <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_16">
-                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <http uri-template="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                               value="https://ingestion.prod-live.hydra.elsevier.systems/"/>
                   </endpoint>
                </send>
             </then>

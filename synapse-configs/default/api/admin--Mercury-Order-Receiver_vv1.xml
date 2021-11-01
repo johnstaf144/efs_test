@@ -13,9 +13,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Order-Receiver_APIproductionEndpoint_0">
-                     <http uri-template="https://order-receiver.uat.mercury.tio.systems/v1/"/>
+                     <http uri-template="https://order-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://order-receiver.uat.mercury.tio.systems/v1/"/>
+                               value="https://order-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -39,9 +39,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Order-Receiver_APIproductionEndpoint_1">
-                     <http uri-template="https://order-receiver.uat.mercury.tio.systems/v1/"/>
+                     <http uri-template="https://order-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://order-receiver.uat.mercury.tio.systems/v1/"/>
+                               value="https://order-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -65,9 +65,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Order-Receiver_APIproductionEndpoint_2">
-                     <http uri-template="https://order-receiver.uat.mercury.tio.systems/v1/"/>
+                     <http uri-template="https://order-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://order-receiver.uat.mercury.tio.systems/v1/"/>
+                               value="https://order-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>

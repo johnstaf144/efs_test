@@ -13,19 +13,14 @@
             <then>
                <send>
                   <endpoint name="admin--Vendor_APIproductionEndpoint_0">
-                     <http uri-template="https://vendor-v1-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/vendors/grs"/>
+                     <http uri-template="https://vendor-v1-eip.apps.ose.cp.tio.systems/cxf/vendors/grs"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://vendor-v1-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/vendors/grs"/>
+                               value="https://vendor-v1-eip.apps.ose.cp.tio.systems/cxf/vendors/grs"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Vendor_APIsandboxEndpoint_0">
-                     <http uri-template="azahari"/>
-                     <property name="ENDPOINT_ADDRESS" value="azahari"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>

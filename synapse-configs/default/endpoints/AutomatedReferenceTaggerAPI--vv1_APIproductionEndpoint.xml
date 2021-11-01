@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="AutomatedReferenceTaggerAPI--vv1_APIproductionEndpoint">
-   <http uri-template="https://uat.art.elsevier.com/">
+   <http uri-template="https://art.elsevier.com/">
       <timeout>
          <duration>120000</duration>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
-   <property name="ENDPOINT_ADDRESS" value="https://uat.art.elsevier.com/"/>
+   <property name="ENDPOINT_ADDRESS" value="https://art.elsevier.com/"/>
 </endpoint>

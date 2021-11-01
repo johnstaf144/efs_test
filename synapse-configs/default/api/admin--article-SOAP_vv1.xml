@@ -13,9 +13,9 @@
             <then>
                <send>
                   <endpoint name="admin--article-SOAP_APIproductionEndpoint_0">
-                     <address uri="https://article-soap-service-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/articlePS"/>
+                     <address uri="https://article-soap-service-eip.apps.ose.cp.tio.systems/cxf/articlePS"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://article-soap-service-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/articlePS"/>
+                               value="https://article-soap-service-eip.apps.ose.cp.tio.systems/cxf/articlePS"/>
                   </endpoint>
                </send>
             </then>
@@ -36,9 +36,7 @@
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
 		<property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
-		<property name="APILevelPolicy" value=""/>
-		<property name="APISecurity" value="oauth2"/>
-      </handler>	
+	</handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">

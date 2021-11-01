@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--ReviewerHub-ERMS-Editor-API_APIproductionEndpoint_0">
-                     <http uri-template="https://reviewerhub-erms-integration-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                     <http uri-template="https://reviewerhub-erms-integration-eip.apps.ose.cp.tio.systems"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://reviewerhub-erms-integration-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+                               value="https://reviewerhub-erms-integration-eip.apps.ose.cp.tio.systems"/>
                   </endpoint>
                </send>
             </then>

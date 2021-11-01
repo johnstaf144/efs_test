@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Invoice-Fulfillment-Receiver_APIproductionEndpoint_0">
-                     <http uri-template="https://invoice-fulfillment-receiver.uat.mercury.tio.systems/v1/"/>
+                     <http uri-template="https://invoice-fulfillment-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://invoice-fulfillment-receiver.uat.mercury.tio.systems/v1/"/>
+                               value="https://invoice-fulfillment-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -39,9 +39,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Invoice-Fulfillment-Receiver_APIproductionEndpoint_1">
-                     <http uri-template="https://invoice-fulfillment-receiver.uat.mercury.tio.systems/v1/"/>
+                     <http uri-template="https://invoice-fulfillment-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://invoice-fulfillment-receiver.uat.mercury.tio.systems/v1/"/>
+                               value="https://invoice-fulfillment-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -60,7 +60,9 @@
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
       </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+		<property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+	</handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">

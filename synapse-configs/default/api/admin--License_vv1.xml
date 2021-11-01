@@ -13,9 +13,14 @@
             <then>
                <send>
                   <endpoint name="admin--License_APIproductionEndpoint_0">
-                     <http uri-template="https://license-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/license/"/>
+                     <http uri-template="https://license-service-eip.apps.ose.cp.tio.systems/v2/license">
+                        <timeout>
+                           <duration>240000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://license-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/license/"/>
+                               value="https://license-service-eip.apps.ose.cp.tio.systems/v2/license"/>
                   </endpoint>
                </send>
             </then>
@@ -37,9 +42,14 @@
             <then>
                <send>
                   <endpoint name="admin--License_APIproductionEndpoint_1">
-                     <http uri-template="https://license-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/license/"/>
+                     <http uri-template="https://license-service-eip.apps.ose.cp.tio.systems/v2/license">
+                        <timeout>
+                           <duration>240000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://license-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/license/"/>
+                               value="https://license-service-eip.apps.ose.cp.tio.systems/v2/license"/>
                   </endpoint>
                </send>
             </then>
@@ -61,9 +71,14 @@
             <then>
                <send>
                   <endpoint name="admin--License_APIproductionEndpoint_2">
-                     <http uri-template="https://license-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/license/"/>
+                     <http uri-template="https://license-service-eip.apps.ose.cp.tio.systems/v2/license">
+                        <timeout>
+                           <duration>240000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://license-service-eipuat.apps.ose-nonprod.cp.tio.systems/v2/license/"/>
+                               value="https://license-service-eip.apps.ose.cp.tio.systems/v2/license"/>
                   </endpoint>
                </send>
             </then>
@@ -82,13 +97,10 @@
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
-         <property name="allowHeaders"
-                   value="authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction"/>
-         <property name="allowedOrigins" value="*"/>
-         <property name="allowedMethods" value="GET"/>
-         <property name="allowCredentials" value="true"/>
       </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+		<property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+	</handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">

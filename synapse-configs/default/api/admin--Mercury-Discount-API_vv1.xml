@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Discount-API_APIproductionEndpoint_0">
-                     <http uri-template="https://discount-calculator.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://discount-calculator-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://discount-calculator.uat.mercury.tio.systems/"/>
+                               value="https://discount-calculator-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -39,9 +39,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Discount-API_APIproductionEndpoint_1">
-                     <http uri-template="https://discount-calculator.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://discount-calculator-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://discount-calculator.uat.mercury.tio.systems/"/>
+                               value="https://discount-calculator-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
@@ -56,20 +56,20 @@
       </outSequence>
    </resource>
    <handlers>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
+         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
          <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
          <property name="APILevelPolicy" value=""/>
          <property name="APISecurity" value="oauth2"/>
       </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
-         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
-      </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
    </handlers>
 </api>

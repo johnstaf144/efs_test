@@ -13,20 +13,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Address-Lookup_APIproductionEndpoint_0">
-                     <http uri-template="https://address-lookup.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://address-lookup-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://address-lookup.uat.mercury.tio.systems/"/>
+                               value="https://address-lookup-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Address-Lookup_APIsandboxEndpoint_0">
-                     <http uri-template="https://address-lookup-v3.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://address-lookup-v3.uat.mercury.tio.systems/"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -45,20 +39,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Address-Lookup_APIproductionEndpoint_1">
-                     <http uri-template="https://address-lookup.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://address-lookup-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://address-lookup.uat.mercury.tio.systems/"/>
+                               value="https://address-lookup-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Address-Lookup_APIsandboxEndpoint_1">
-                     <http uri-template="https://address-lookup-v3.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://address-lookup-v3.uat.mercury.tio.systems/"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>

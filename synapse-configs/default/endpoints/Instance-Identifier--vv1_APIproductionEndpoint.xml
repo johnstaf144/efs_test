@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Instance-Identifier--vv1_APIproductionEndpoint">
-   <http uri-template="https://instance-identifier-service-v1-eipuat.apps.ose-nonprod.cp.tio.systems">
+   <http uri-template="https://instance-identifier-service-v1-eip.apps.ose.cp.tio.systems">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://instance-identifier-service-v1-eipuat.apps.ose-nonprod.cp.tio.systems"/>
+             value="https://instance-identifier-service-v1-eip.apps.ose.cp.tio.systems"/>
 </endpoint>

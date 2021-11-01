@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Instance-Identifier--vv1_APIsandboxEndpoint">
-   <http uri-template="azahari">
+   <http uri-template="admin">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
-   <property name="ENDPOINT_ADDRESS" value="azahari"/>
+   <property name="ENDPOINT_ADDRESS" value="admin"/>
 </endpoint>

@@ -17,9 +17,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_0">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -45,9 +45,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_1">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -73,9 +73,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_2">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -101,9 +101,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_3">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -129,9 +129,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_4">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -157,9 +157,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_5">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -183,9 +183,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_6">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -211,9 +211,9 @@
             <then>
                <send>
                   <endpoint name="admin--CEFMachineLearningWorkbench_APIproductionEndpoint_7">
-                     <http uri-template="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                     <http uri-template="https://prod-data-elb.cef.elsevier.com/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://uat-data-elb.cef-nonprod.elsevier.com/v1/"/>
+                               value="https://prod-data-elb.cef.elsevier.com/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -232,7 +232,9 @@
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
       </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+		<property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+	</handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">

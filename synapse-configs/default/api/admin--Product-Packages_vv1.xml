@@ -15,23 +15,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_0">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_0">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -52,23 +47,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_1">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_1">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -89,23 +79,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_2">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_2">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -126,23 +111,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_3">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_3">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -161,23 +141,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_4">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_4">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -198,23 +173,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_5">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_5">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -235,23 +205,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_6">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_6">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -272,23 +237,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_7">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_7">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -309,23 +269,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_8">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_8">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -346,23 +301,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_9">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_9">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -383,23 +333,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_10">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_10">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -418,23 +363,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_11">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_11">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -455,23 +395,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_12">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_12">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -492,23 +427,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_13">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_13">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -529,23 +459,18 @@
             <then>
                <send>
                   <endpoint name="admin--Product-Packages_APIproductionEndpoint_14">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
-                        <timeout>
-                           <duration>300000</duration>
-                           <responseAction>fault</responseAction>
-                        </timeout>
-                     </http>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--Product-Packages_APIsandboxEndpoint_14">
-                     <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://eph-product-packages-api-v2-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -566,7 +491,7 @@
          <property name="allowedMethods" value="GET,PUT,POST,PATCH,DELETE,OPTIONS"/>
          <property name="allowCredentials" value="true"/>
       </handler>
-       <handler class="com.elsevier.api.enterprise.handler.ElsJwtAuthenticationHandler">
+      <handler class="com.elsevier.api.enterprise.handler.ElsJwtAuthenticationHandler">
          <property name="AcceptedClockSkew" value="10"/>
          <property name="JwtOutboundHeaderName" value="X-JWT-ASSERTION"/>
          <property name="AcceptedSigningKey" value="mscert3.der"/>
@@ -574,6 +499,7 @@
          <property name="AcceptedIssuer"
                    value="https://sts.windows.net/9274ee3f-9425-4109-a27f-9fb15c10675d/"/>
       </handler>
+
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">

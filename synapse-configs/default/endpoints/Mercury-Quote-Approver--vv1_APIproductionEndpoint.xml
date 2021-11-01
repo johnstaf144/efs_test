@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Mercury-Quote-Approver--vv1_APIproductionEndpoint">
-   <http uri-template="https://quote-approver.uat.mercury.tio.systems/">
+   <http uri-template="https://quote-approver-v3.qtc.tio.systems/">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://quote-approver.uat.mercury.tio.systems/"/>
+             value="https://quote-approver-v3.qtc.tio.systems/"/>
 </endpoint>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Finance-SOAP-Cutover--vv4_APIproductionEndpoint">
+   <address uri="https://finance-soap-v4-eip.apps.ose.cp.tio.systems/cxf/v4/financeDS">
+      <timeout>
+         <duration>120000</duration>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </address>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://finance-soap-v4-eip.apps.ose.cp.tio.systems/cxf/v4/financeDS"/>
+</endpoint>

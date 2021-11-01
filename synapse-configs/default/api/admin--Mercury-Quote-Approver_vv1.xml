@@ -13,20 +13,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Approver_APIproductionEndpoint_0">
-                     <http uri-template="https://quote-approver.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-approver-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver.uat.mercury.tio.systems/"/>
+                               value="https://quote-approver-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-Approver_APIsandboxEndpoint_0">
-                     <http uri-template="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -45,20 +39,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Approver_APIproductionEndpoint_1">
-                     <http uri-template="https://quote-approver.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-approver-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver.uat.mercury.tio.systems/"/>
+                               value="https://quote-approver-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-Approver_APIsandboxEndpoint_1">
-                     <http uri-template="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -75,20 +63,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Approver_APIproductionEndpoint_2">
-                     <http uri-template="https://quote-approver.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-approver-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver.uat.mercury.tio.systems/"/>
+                               value="https://quote-approver-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-Approver_APIsandboxEndpoint_2">
-                     <http uri-template="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -107,20 +89,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Approver_APIproductionEndpoint_3">
-                     <http uri-template="https://quote-approver.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-approver-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver.uat.mercury.tio.systems/"/>
+                               value="https://quote-approver-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-Approver_APIsandboxEndpoint_3">
-                     <http uri-template="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-approver-v3.uat.mercury.tio.systems/"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>

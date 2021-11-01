@@ -5,7 +5,9 @@
      version="v3"
      version-type="context"
      transports="https">
-   <resource methods="GET" uri-template="/products/{id}" faultSequence="fault">
+   <resource methods="GET"
+             url-mapping="/products/person-names"
+             faultSequence="fault">
       <inSequence>
          <property name="api.ut.backendRequestTime"
                    expression="get-property('SYSTEM_TIME')"/>
@@ -13,18 +15,58 @@
             <then>
                <send>
                   <endpoint name="admin--EnterpriseProductHub-products_APIproductionEndpoint_0">
-                     <http uri-template="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/">
+                        <timeout>
+                           <duration>60000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
                   <endpoint name="admin--EnterpriseProductHub-products_APIsandboxEndpoint_0">
-                     <http uri-template="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                     <http uri-template="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET" uri-template="/products/{id}" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--EnterpriseProductHub-products_APIproductionEndpoint_1">
+                     <http uri-template="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/">
+                        <timeout>
+                           <duration>60000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--EnterpriseProductHub-products_APIsandboxEndpoint_1">
+                     <http uri-template="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -42,19 +84,24 @@
          <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
             <then>
                <send>
-                  <endpoint name="admin--EnterpriseProductHub-products_APIproductionEndpoint_1">
-                     <http uri-template="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                  <endpoint name="admin--EnterpriseProductHub-products_APIproductionEndpoint_2">
+                     <http uri-template="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/">
+                        <timeout>
+                           <duration>60000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
                <send>
-                  <endpoint name="admin--EnterpriseProductHub-products_APIsandboxEndpoint_1">
-                     <http uri-template="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                  <endpoint name="admin--EnterpriseProductHub-products_APIsandboxEndpoint_2">
+                     <http uri-template="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+                               value="https://product-hub-search-v3-eip.apps.ose.cp.tio.systems/"/>
                   </endpoint>
                </send>
             </else>
@@ -74,15 +121,14 @@
          <property name="allowedOrigins" value="*"/>
          <property name="allowedMethods" value="GET,PUT,POST,DELETE,PATCH,OPTIONS"/>
       </handler>
-<handler class="com.elsevier.api.enterprise.handler.ElsJwtAuthenticationHandler">
+      <handler class="com.elsevier.api.enterprise.handler.ElsJwtAuthenticationHandler">
          <property name="AcceptedClockSkew" value="10"/>
          <property name="JwtOutboundHeaderName" value="X-JWT-ASSERTION"/>
          <property name="AcceptedSigningKey" value="mscert3.der"/>
          <property name="JwtInboundHeaderName" value="X-ADFS-JWT"/>
-         <property name="AcceptedIssuer"
-                   value="https://sts.windows.net/9274ee3f-9425-4109-a27f-9fb15c10675d/"/>
+         <property name="AcceptedIssuer" value="https://sts.windows.net/9274ee3f-9425-4109-a27f-9fb15c10675d/"/>
       </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
+	<handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
          <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
       </handler>

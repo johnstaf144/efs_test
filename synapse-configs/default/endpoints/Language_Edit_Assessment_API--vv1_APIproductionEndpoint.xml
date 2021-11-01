@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Language Edit Assessment API--vv1_APIproductionEndpoint">
-   <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment">
+   <http uri-template="https://app-services.apollo.elsevier.com/language-edit-assessment">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+             value="https://app-services.apollo.elsevier.com/language-edit-assessment"/>
 </endpoint>

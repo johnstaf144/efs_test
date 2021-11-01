@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="exari-product-search--vv1_APIproductionEndpoint">
-   <http uri-template="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books">
+   <http uri-template="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://exari-books-data-authentication-eipuat.apps.ose-nonprod.cp.tio.systems/v1/exari-books"/>
+             value="https://exari-books-data-authentication-eip.apps.ose.cp.tio.systems/v1/exari-books"/>
 </endpoint>

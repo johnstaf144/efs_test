@@ -13,9 +13,9 @@
             <then>
                <send>
                   <endpoint name="admin--FileUpload_APIproductionEndpoint_0">
-                     <http uri-template="https://vtw-fileupload-proxy-ob2uat.apps.ose-nonprod.cp.tio.systems/carii/"/>
+                     <http uri-template="https://vtw-fileupload-proxy-ob2.apps.ose.cp.tio.systems/carii"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://vtw-fileupload-proxy-ob2uat.apps.ose-nonprod.cp.tio.systems/carii/"/>
+                               value="https://vtw-fileupload-proxy-ob2.apps.ose.cp.tio.systems/carii"/>
                   </endpoint>
                </send>
             </then>
@@ -36,7 +36,7 @@
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
          <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
-         <property name="APILevelPolicy" value=""/>
+         <property name="APILevelPolicy" value="6KPerMin"/>
          <property name="APISecurity" value="oauth2"/>
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>

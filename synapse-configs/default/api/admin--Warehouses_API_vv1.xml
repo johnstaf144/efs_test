@@ -13,14 +13,19 @@
             <then>
                <send>
                   <endpoint name="admin--Warehouses API_APIproductionEndpoint_0">
-                     <http uri-template="https://warehouses-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/warehouses/"/>
+                     <http uri-template="https://warehouses-v1-eip.apps.ose.cp.tio.systems/v1/warehouses/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://warehouses-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/warehouses/"/>
+                               value="https://warehouses-v1-eip.apps.ose.cp.tio.systems/v1/warehouses/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Warehouses API_APIsandboxEndpoint_0">
+                     <http uri-template="admin"/>
+                     <property name="ENDPOINT_ADDRESS" value="admin"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -37,14 +42,19 @@
             <then>
                <send>
                   <endpoint name="admin--Warehouses API_APIproductionEndpoint_1">
-                     <http uri-template="https://warehouses-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/warehouses/"/>
+                     <http uri-template="https://warehouses-v1-eip.apps.ose.cp.tio.systems/v1/warehouses/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://warehouses-v1-eipuat.apps.ose-nonprod.cp.tio.systems/v1/warehouses/"/>
+                               value="https://warehouses-v1-eip.apps.ose.cp.tio.systems/v1/warehouses/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Warehouses API_APIsandboxEndpoint_1">
+                     <http uri-template="admin"/>
+                     <property name="ENDPOINT_ADDRESS" value="admin"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -54,6 +64,9 @@
       </outSequence>
    </resource>
    <handlers>
+      <handler class="org.soasecurity.apim.authentication.handler.MutualSSLAuthenticationHandler">
+       <property name="AcceptedCNList" value="epayprod.quadrantsubs.com"/>
+</handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>

@@ -13,19 +13,24 @@
             <then>
                <send>
                   <endpoint name="admin--Customer-Search-SOAP_APIproductionEndpoint_0">
-                     <address uri="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/customerSearchDS/v3">
+                     <address uri="https://customer-search-soap-service-v2-eip.apps.ose.cp.tio.systems/cxf/customerSearchDS/v3">
                         <timeout>
-                           <duration>60000</duration>
+                           <duration>120000</duration>
                            <responseAction>fault</responseAction>
                         </timeout>
                      </address>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/customerSearchDS/v3"/>
+                               value="https://customer-search-soap-service-v2-eip.apps.ose.cp.tio.systems/cxf/customerSearchDS/v3"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Customer-Search-SOAP_APIsandboxEndpoint_0">
+                     <address uri="admin"/>
+                     <property name="ENDPOINT_ADDRESS" value="admin"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>

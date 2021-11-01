@@ -13,14 +13,18 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Lookup_APIproductionEndpoint_0">
-                     <http uri-template="https://quote-lookupv2.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-lookupv2.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-lookupv2.qtc.tio.systems/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://quote-lookupv2.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Mercury-Quote-Lookup_APIsandboxEndpoint_0">
+                     <http uri-template="popov1"/>
+                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -37,14 +41,18 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Lookup_APIproductionEndpoint_1">
-                     <http uri-template="https://quote-lookupv2.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-lookupv2.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-lookupv2.qtc.tio.systems/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://quote-lookupv2.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Mercury-Quote-Lookup_APIsandboxEndpoint_1">
+                     <http uri-template="popov1"/>
+                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -61,14 +69,18 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Lookup_APIproductionEndpoint_2">
-                     <http uri-template="https://quote-lookupv2.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-lookupv2.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-lookupv2.qtc.tio.systems/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://quote-lookupv2.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Mercury-Quote-Lookup_APIsandboxEndpoint_2">
+                     <http uri-template="popov1"/>
+                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -85,14 +97,18 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Lookup_APIproductionEndpoint_3">
-                     <http uri-template="https://quote-lookupv2.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-lookupv2.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-lookupv2.qtc.tio.systems/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://quote-lookupv2.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Mercury-Quote-Lookup_APIsandboxEndpoint_3">
+                     <http uri-template="popov1"/>
+                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -111,14 +127,18 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Lookup_APIproductionEndpoint_4">
-                     <http uri-template="https://quote-lookupv2.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-lookupv2.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-lookupv2.qtc.tio.systems/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://quote-lookupv2.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Mercury-Quote-Lookup_APIsandboxEndpoint_4">
+                     <http uri-template="popov1"/>
+                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>
@@ -137,14 +157,18 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-Lookup_APIproductionEndpoint_5">
-                     <http uri-template="https://quote-lookupv2.uat.mercury.tio.systems/"/>
-                     <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-lookupv2.uat.mercury.tio.systems/"/>
+                     <http uri-template="https://quote-lookupv2.qtc.tio.systems/"/>
+                     <property name="ENDPOINT_ADDRESS" value="https://quote-lookupv2.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <sequence key="_sandbox_key_error_"/>
+               <send>
+                  <endpoint name="admin--Mercury-Quote-Lookup_APIsandboxEndpoint_5">
+                     <http uri-template="popov1"/>
+                     <property name="ENDPOINT_ADDRESS" value="popov1"/>
+                  </endpoint>
+               </send>
             </else>
          </filter>
       </inSequence>

@@ -15,9 +15,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_0">
-                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <http uri-template="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                               value="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -41,9 +41,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_1">
-                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <http uri-template="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                               value="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -65,9 +65,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_2">
-                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <http uri-template="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                               value="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -91,9 +91,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_3">
-                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <http uri-template="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                               value="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -117,9 +117,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_4">
-                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <http uri-template="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                               value="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -143,9 +143,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_5">
-                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <http uri-template="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                               value="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>
@@ -169,9 +169,9 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_6">
-                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <http uri-template="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                               value="https://transaction-details-receiver.qtc.tio.systems/v1/"/>
                   </endpoint>
                </send>
             </then>

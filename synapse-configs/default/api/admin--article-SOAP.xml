@@ -40,7 +40,7 @@
                <property name="uri.var.portnum" expression="get-property('https.nio.port')"/>
                <send>
                   <endpoint>
-                     <http uri-template="https://passthru.enterprise-uat.api.elsevier.com:{uri.var.portnum}/cxf/articlePS/v1">
+                     <http uri-template="https://passthru.enterprise.api.elsevier.com:{uri.var.portnum}/cxf/articlePS/v1">
                         <timeout>
                            <duration>60000</duration>
                            <responseAction>fault</responseAction>

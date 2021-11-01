@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="etax-soap-cutover--v1_APIproductionEndpoint">
+   <http uri-template="https://etax-soap-cutover-service-eip.apps.ose.cp.tio.systems/cxf/v2/etaxPS">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://etax-soap-cutover-service-eip.apps.ose.cp.tio.systems/cxf/v2/etaxPS"/>
+</endpoint>

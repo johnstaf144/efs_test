@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="admin--Authenticity"
+     context="/cxf/authenticity/v1"
+     version="v1"
+     version-type="context"
+     transports="https">
+   <resource methods="POST"
+             url-mapping="/markProductShippedPS"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_0">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/markGoodsInReversalPS"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_1">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/markProductScrappedPS"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_2">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/amendISBNPS" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_3">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/markProductReturnedPS"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_4">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/markGoodsInPS" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_5">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             url-mapping="/checkAuthenticityPS"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_6">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/createContainerPS"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Authenticity_APIproductionEndpoint_7">
+                     <http uri-template="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity">
+                        <timeout>
+                           <duration>120000</duration>
+                           <responseAction>fault</responseAction>
+                        </timeout>
+                     </http>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://authenticity-service-eip.apps.ose.cp.tio.systems/cxf/authenticity"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <handlers>
+      <handler class="org.soasecurity.apim.authentication.handler.CustomAPIAuthenticationHeaderHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
+         <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+		<property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+	</handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
+         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
+   </handlers>
+</api>

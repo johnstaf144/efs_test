@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="mercury-balance-lookup--vv1_APIproductionEndpoint">
-   <http uri-template="https://balance-lookup.uat.mercury.tio.systems/">
+   <http uri-template="https://balance-lookup.qtc.tio.systems">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
-   <property name="ENDPOINT_ADDRESS"
-             value="https://balance-lookup.uat.mercury.tio.systems/"/>
+   <property name="ENDPOINT_ADDRESS" value="https://balance-lookup.qtc.tio.systems"/>
 </endpoint>

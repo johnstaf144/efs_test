@@ -15,19 +15,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-API_APIproductionEndpoint_0">
-                     <http uri-template="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                     <http uri-template="https://quote-maintenance-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                               value="https://quote-maintenance-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-API_APIsandboxEndpoint_0">
-                     <http uri-template="ems055"/>
-                     <property name="ENDPOINT_ADDRESS" value="ems055"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -46,19 +41,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-API_APIproductionEndpoint_1">
-                     <http uri-template="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                     <http uri-template="https://quote-maintenance-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                               value="https://quote-maintenance-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-API_APIsandboxEndpoint_1">
-                     <http uri-template="ems055"/>
-                     <property name="ENDPOINT_ADDRESS" value="ems055"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -75,19 +65,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-API_APIproductionEndpoint_2">
-                     <http uri-template="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                     <http uri-template="https://quote-maintenance-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                               value="https://quote-maintenance-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-API_APIsandboxEndpoint_2">
-                     <http uri-template="ems055"/>
-                     <property name="ENDPOINT_ADDRESS" value="ems055"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -106,19 +91,14 @@
             <then>
                <send>
                   <endpoint name="admin--Mercury-Quote-API_APIproductionEndpoint_3">
-                     <http uri-template="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                     <http uri-template="https://quote-maintenance-v3.qtc.tio.systems/"/>
                      <property name="ENDPOINT_ADDRESS"
-                               value="https://quote-maintenance-v2.uat.mercury.tio.systems/v2/"/>
+                               value="https://quote-maintenance-v3.qtc.tio.systems/"/>
                   </endpoint>
                </send>
             </then>
             <else>
-               <send>
-                  <endpoint name="admin--Mercury-Quote-API_APIsandboxEndpoint_3">
-                     <http uri-template="ems055"/>
-                     <property name="ENDPOINT_ADDRESS" value="ems055"/>
-                  </endpoint>
-               </send>
+               <sequence key="_sandbox_key_error_"/>
             </else>
          </filter>
       </inSequence>
@@ -128,23 +108,20 @@
       </outSequence>
    </resource>
    <handlers>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
          <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
+         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
       </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
          <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
          <property name="APILevelPolicy" value=""/>
          <property name="APISecurity" value="oauth2"/>
       </handler>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler">
-         <property name="productionMaxCount" value=""/>
-         <property name="sandboxMaxCount" value=""/>
-      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
-      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
-         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
-      </handler>
       <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
    </handlers>
 </api>

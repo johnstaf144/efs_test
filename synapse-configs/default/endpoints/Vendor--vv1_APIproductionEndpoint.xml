@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoint xmlns="http://ws.apache.org/ns/synapse"
           name="Vendor--vv1_APIproductionEndpoint">
-   <http uri-template="https://vendor-v1-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/vendors/grs">
+   <http uri-template="https://vendor-v1-eip.apps.ose.cp.tio.systems/cxf/vendors/grs">
       <timeout>
          <responseAction>fault</responseAction>
       </timeout>
    </http>
    <property name="ENDPOINT_ADDRESS"
-             value="https://vendor-v1-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/vendors/grs"/>
+             value="https://vendor-v1-eip.apps.ose.cp.tio.systems/cxf/vendors/grs"/>
 </endpoint>
