@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse"
+          name="_PRODUCTION_-structure-references-v1">
+   <property name="OUT_ONLY" value="true"/>
+   <script language="js">var sub_path = mc.getProperty("websocket.subscriber.path");	    
+        	var queryParamString = sub_path.split("\\?")[1];
+                if(queryParamString != undefined) {	    
+		mc.setProperty('queryparams', "?" + queryParamString);
+		}</script>
+   <property xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+             xmlns:ns="http://org.apache.synapse/xsd"
+             xmlns:ns3="http://org.apache.synapse/xsd"
+             name="queryparams"
+             expression="$ctx:queryparams"/>
+   <property name="urlVal"
+             value="wss://uat.ppe-np.elsevier.com:443/services/ppe-service-reference-structuring/structure-references"/>
+   <property xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+             xmlns:ns3="http://org.apache.synapse/xsd"
+             name="fullUrl"
+             expression="fn:concat(get-property('urlVal'), get-property('queryparams'))"
+             type="STRING"/>
+   <header xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+           xmlns:ns3="http://org.apache.synapse/xsd"
+           name="To"
+           expression="$ctx:fullUrl"/>
+   <send>
+      <endpoint>
+         <address uri="wss://uat.ppe-np.elsevier.com:443/services/ppe-service-reference-structuring/structure-references">
+      <timeout>
+        <duration>30000</duration>
+        <responseAction>fault</responseAction>
+      </timeout>
+      <suspendOnFailure>
+        <errorCodes>-1</errorCodes>
+        <initialDuration>0</initialDuration>
+        <progressionFactor>1.0</progressionFactor>
+        <maximumDuration>0</maximumDuration>
+      </suspendOnFailure>
+      <markForSuspension>
+        <errorCodes>-1</errorCodes>
+      </markForSuspension>
+    </address>
+    <property name="ENDPOINT_ADDRESS" value="wss://uat.ppe-np.elsevier.com:443/services/ppe-service-reference-structuring/structure-references"/>
+      </endpoint>
+   </send>
+</sequence>

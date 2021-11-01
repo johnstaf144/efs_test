@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="admin--Customers:vv3--In">
+   <switch xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+           xmlns:ns3="http://org.apache.synapse/xsd"
+           source="get-property('To')">
+      <case regex=".*/organizations-by-domain.*">
+         <property name="service_ep"
+                   value="https://customer-service-es-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/organizations-by-domain/.*">
+         <property name="service_ep"
+                   value="https://customer-service-es-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/organizations-summaries.*">
+         <property name="service_ep"
+                   value="https://customer-service-es-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/organizationhierarchies/.*/path">
+         <property name="service_ep"
+                   value="https://customer-service-es-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/organizationhierarchies/.*/type/.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/findECR.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/organizations.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/organizations/.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/persons.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/persons/.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/link.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/link/.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+      <case regex=".*/blacklist.*">
+         <property name="service_ep"
+                   value="https://customer-service-jpa-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v3/customers"/>
+      </case>
+   </switch>
+   <header xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+           xmlns:ns3="http://org.apache.synapse/xsd"
+           name="To"
+           expression="get-property('service_ep')"/>
+   <property xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+             xmlns:ns3="http://org.apache.synapse/xsd"
+             name="ENDPOINT_ADDRESS"
+             expression="get-property('service_ep')"/>
+</sequence>

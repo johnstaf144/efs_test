@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="admin--Customers"
+     context="/v4/customers"
+     version="v4"
+     version-type="context"
+     transports="https">
+   <resource methods="GET" url-mapping="/findECR" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_0">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_0">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="PUT" url-mapping="/link" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_1">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_1">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST PUT GET"
+             url-mapping="/organizations"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_2">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_2">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/blacklist" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_3">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_3">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/organizations/{ecrId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_4">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_4">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET" uri-template="/persons/{ecrId}" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_5">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_5">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/organizationhierarchies/{ecrId}/path"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_6">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_6">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST PUT GET" url-mapping="/persons" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_7">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_7">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             url-mapping="/organizations-summaries"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_8">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_8">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             url-mapping="/organizations-by-domain"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_9">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_9">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET" url-mapping="/countries" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Customers_APIproductionEndpoint_10">
+                     <default/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Customers_APIsandboxEndpoint_10">
+                     <default/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <handlers>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
+         <property name="apiImplementationType" value="ENDPOINT"/>
+         <property name="allowHeaders"
+                   value="authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction,X-ADFS-JWT"/>
+         <property name="allowedOrigins" value="*"/>
+         <property name="allowedMethods" value="GET,PUT,POST,PATCH,DELETE,OPTIONS"/>
+         <property name="allowCredentials" value="true"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
+         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
+      </handler>
+      <handler class="com.elsevier.api.enterprise.handler.ElsJwtAuthenticationHandler">
+         <property name="AcceptedClockSkew" value="10"/>
+         <property name="JwtOutboundHeaderName" value="X-JWT-ASSERTION"/>
+         <property name="AcceptedSigningKey" value="mscert2.der"/>
+         <property name="JwtInboundHeaderName" value="X-ADFS-JWT"/>
+         <property name="AcceptedIssuer"
+                   value="https://sts.windows.net/9274ee3f-9425-4109-a27f-9fb15c10675d/"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
+   </handlers>
+</api>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="finance-invoices-soap--vv4_APIproductionEndpoint">
+   <http uri-template="https://finance-soap-v4-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/v4/financeDS">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://finance-soap-v4-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/v4/financeDS"/>
+</endpoint>

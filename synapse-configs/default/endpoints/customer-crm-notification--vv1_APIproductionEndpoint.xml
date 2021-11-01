@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="customer-crm-notification--vv1_APIproductionEndpoint">
+   <http uri-template="https://customer-notification-crm-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v1/crm/customers/notifications">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://customer-notification-crm-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/v1/crm/customers/notifications"/>
+</endpoint>

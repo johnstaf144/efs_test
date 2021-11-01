@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="admin--Funding-Ingestion"
+     context="/v1/funding-ingestion"
+     version="v1"
+     version-type="context"
+     transports="https">
+   <resource methods="GET"
+             uri-template="/publication/{ingestionId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_0">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_0">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET" url-mapping="/publication" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_1">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_1">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/award/ingestion-detail-list/{batchId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_2">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_2">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/publication/bulk"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_3">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_3">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET" url-mapping="/award" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_4">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_4">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/funding-body/ingestion-detail-list/{batchId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_5">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_5">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/funding-body/bulk"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_6">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_6">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/funding-body/{ingestionId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_7">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_7">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/opportunity/{ingestionId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_8">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_8">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/award/bulk" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_9">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_9">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/publication/ingestion-detail-list/{batchId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_10">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_10">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/award/{ingestionId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_11">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_11">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             uri-template="/opportunity/ingestion-detail-list/{batchId}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_12">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_12">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/vtool" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_13">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_13">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/opportunity/bulk"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_14">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_14">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET"
+             url-mapping="/funding-body"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_15">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_15">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST GET" url-mapping="/opportunity" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIproductionEndpoint_16">
+                     <http uri-template="https://ingestion.hydra-test.elsevier.systems/"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://ingestion.hydra-test.elsevier.systems/"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Funding-Ingestion_APIsandboxEndpoint_16">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <handlers>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
+         <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
+         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+         <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+         <property name="APILevelPolicy" value=""/>
+         <property name="APISecurity" value="oauth2"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
+   </handlers>
+</api>

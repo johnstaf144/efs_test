@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="EnterpriseProductHub-works--vv3_APIproductionEndpoint">
+   <http uri-template="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://product-hub-search-v3-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+</endpoint>

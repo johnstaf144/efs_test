@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Customer-Maintenance-SOAP--vv2_APIproductionEndpoint">
+   <address uri="https://customer-maintenance-soap-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/customerMaintenanceDS/v2">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </address>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://customer-maintenance-soap-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/customerMaintenanceDS/v2"/>
+</endpoint>

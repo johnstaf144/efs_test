@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Funding-Ingestion--vv1_APIproductionEndpoint">
+   <http uri-template="https://ingestion.hydra-test.elsevier.systems/">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://ingestion.hydra-test.elsevier.systems/"/>
+</endpoint>

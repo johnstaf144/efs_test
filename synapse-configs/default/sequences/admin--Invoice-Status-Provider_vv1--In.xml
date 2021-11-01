@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse"
+          name="admin--Invoice-Status-Provider:vv1--In">
+   <property xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+             xmlns:ns3="http://org.apache.synapse/xsd"
+             name="service_ep"
+             expression="fn:concat('https://aries-invoice-status-provider.uat.mercury.tio.systems/v1/', 'status-events')"/>
+   <header xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"
+           xmlns:ns3="http://org.apache.synapse/xsd"
+           name="To"
+           expression="get-property('service_ep')"/>
+</sequence>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="etax-soap--vv3_APIproductionEndpoint">
+   <http uri-template="https://etax-soap-service-v3-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/v3/etaxPS">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://etax-soap-service-v3-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/v3/etaxPS"/>
+</endpoint>

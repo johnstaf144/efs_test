@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Mercury-Order-Receiver--vv1_APIproductionEndpoint">
+   <http uri-template="https://order-receiver.uat.mercury.tio.systems/v1/">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://order-receiver.uat.mercury.tio.systems/v1/"/>
+</endpoint>

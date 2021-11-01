@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="product-master-data--vv1_APIsandboxEndpoint">
+   <default>
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </default>
+</endpoint>

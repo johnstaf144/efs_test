@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Books Context Search - Exari--vv1_APIproductionEndpoint">
+   <http uri-template="https://uat.bcsapi.bookmodules-nonprod.tio.systems/api/v1.1/">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://uat.bcsapi.bookmodules-nonprod.tio.systems/api/v1.1/"/>
+</endpoint>

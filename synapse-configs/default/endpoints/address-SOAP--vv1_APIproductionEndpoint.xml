@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="address-SOAP--vv1_APIproductionEndpoint">
+   <address uri="https://address-soap-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/postaladdressvalidatorPS">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </address>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://address-soap-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/postaladdressvalidatorPS"/>
+</endpoint>

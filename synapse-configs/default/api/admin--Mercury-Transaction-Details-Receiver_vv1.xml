@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="admin--Mercury-Transaction-Details-Receiver"
+     context="/v1/transaction-receiver"
+     version="v1"
+     version-type="context"
+     transports="https">
+   <resource methods="PUT"
+             uri-template="/invoices/{invoiceSourceSystem}/{invoiceNumber}/creditnotes/{creditNoteSourceSystem}/{creditNoteNumber}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_0">
+                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             uri-template="/invoices/{sourceSystem}/{invoiceNumber}/amendments"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_1">
+                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/invoices" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_2">
+                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             url-mapping="/swagger/swagger.json"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_3">
+                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="PUT"
+             uri-template="/invoices/{invoiceSourceSystem}/{invoiceNumber}"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_4">
+                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             uri-template="/invoices/{invoiceId}/amendments"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_5">
+                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             uri-template="/invoices/{invoiceId}/creditnotes"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Mercury-Transaction-Details-Receiver_APIproductionEndpoint_6">
+                     <http uri-template="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://transaction-details-receiver.uat.mercury.tio.systems/v1"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <sequence key="_sandbox_key_error_"/>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <handlers>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
+         <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+         <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+         <property name="APILevelPolicy" value=""/>
+         <property name="APISecurity" value="oauth2"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
+         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
+   </handlers>
+</api>

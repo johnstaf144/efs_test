@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Customer-Search-SOAP--vv3_APIproductionEndpoint">
+   <address uri="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/customerSearchDS/v3">
+      <timeout>
+         <duration>60000</duration>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </address>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://customer-search-soap-service-v2-eipuat.apps.ose-nonprod.cp.tio.systems/cxf/customerSearchDS/v3"/>
+</endpoint>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+     name="admin--Language Edit Assessment API"
+     context="/v1/language-edit-assessment"
+     version="v1"
+     version-type="context"
+     transports="https">
+   <resource methods="GET"
+             uri-template="/articles/{resourceIdentifier}/copy-edit-assessments"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_0">
+                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIsandboxEndpoint_0">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="GET"
+             url-mapping="/articles/copy-edit-assessments"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_1">
+                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIsandboxEndpoint_1">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST"
+             url-mapping="/copy-edit-mapping"
+             faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_2">
+                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIsandboxEndpoint_2">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <resource methods="POST" url-mapping="/callback" faultSequence="fault">
+      <inSequence>
+         <property name="api.ut.backendRequestTime"
+                   expression="get-property('SYSTEM_TIME')"/>
+         <filter source="$ctx:AM_KEY_TYPE" regex="PRODUCTION">
+            <then>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIproductionEndpoint_3">
+                     <http uri-template="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                     <property name="ENDPOINT_ADDRESS"
+                               value="https://app-uat-services.apollo-np.elsevier.com/language-edit-assessment"/>
+                  </endpoint>
+               </send>
+            </then>
+            <else>
+               <send>
+                  <endpoint name="admin--Language Edit Assessment API_APIsandboxEndpoint_3">
+                     <http uri-template="none"/>
+                     <property name="ENDPOINT_ADDRESS" value="none"/>
+                  </endpoint>
+               </send>
+            </else>
+         </filter>
+      </inSequence>
+      <outSequence>
+         <class name="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtResponseHandler"/>
+         <send/>
+      </outSequence>
+   </resource>
+   <handlers>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.common.APIMgtLatencyStatsHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.CORSRequestHandler">
+         <property name="apiImplementationType" value="ENDPOINT"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.security.APIAuthenticationHandler">
+         <property name="RemoveOAuthHeadersFromOutMessage" value="true"/>
+         <property name="APILevelPolicy" value=""/>
+         <property name="APISecurity" value="oauth2"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.throttling.ThrottleHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtUsageHandler"/>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.analytics.APIMgtGoogleAnalyticsTrackingHandler">
+         <property name="configKey" value="gov:/apimgt/statistics/ga-config.xml"/>
+      </handler>
+      <handler class="org.wso2.carbon.apimgt.gateway.handlers.ext.APIManagerExtensionHandler"/>
+   </handlers>
+</api>

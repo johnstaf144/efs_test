@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Product-Packages--vv1_APIproductionEndpoint">
+   <http uri-template="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/">
+      <timeout>
+         <duration>300000</duration>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://eph-product-packages-api-v2-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+</endpoint>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Aries Invoice Status Provider--vv1_APIproductionEndpoint">
+   <http uri-template="https://aries-invoice-status-provider.uat.mercury.tio.systems/v1">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://aries-invoice-status-provider.uat.mercury.tio.systems/v1"/>
+</endpoint>

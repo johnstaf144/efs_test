@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="ERMS-Entity-API--vv1_APIproductionEndpoint">
+   <http uri-template="https://erms-entity-api-v1-eipuat.apps.ose-nonprod.cp.tio.systems/api">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://erms-entity-api-v1-eipuat.apps.ose-nonprod.cp.tio.systems/api"/>
+</endpoint>

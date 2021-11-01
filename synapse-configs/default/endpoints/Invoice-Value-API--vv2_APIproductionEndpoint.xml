@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Invoice-Value-API--vv2_APIproductionEndpoint">
+   <http uri-template="https://invoice-value-v2-eipuat.apps.ose-nonprod.cp.tio.systems/api">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://invoice-value-v2-eipuat.apps.ose-nonprod.cp.tio.systems/api"/>
+</endpoint>

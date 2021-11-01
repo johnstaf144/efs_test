@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Enrichment Feedback--vv1_APIproductionEndpoint">
+   <http uri-template="https://uat-cef-feedback-service-elb.cef-nonprod.elsevier.com/">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://uat-cef-feedback-service-elb.cef-nonprod.elsevier.com/"/>
+</endpoint>

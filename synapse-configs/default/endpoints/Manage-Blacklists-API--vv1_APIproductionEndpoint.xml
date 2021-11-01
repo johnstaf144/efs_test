@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint xmlns="http://ws.apache.org/ns/synapse"
+          name="Manage-Blacklists-API--vv1_APIproductionEndpoint">
+   <http uri-template="https://manage-blacklists-eipuat.apps.ose-nonprod.cp.tio.systems/">
+      <timeout>
+         <responseAction>fault</responseAction>
+      </timeout>
+   </http>
+   <property name="ENDPOINT_ADDRESS"
+             value="https://manage-blacklists-eipuat.apps.ose-nonprod.cp.tio.systems/"/>
+</endpoint>
